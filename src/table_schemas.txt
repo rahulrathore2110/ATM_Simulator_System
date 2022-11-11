@@ -1,0 +1,14 @@
+create table signup
+(
+formno varchar(20) primary key,
+name varchar(20),
+father_name varchar(20),
+DOB varchar(20),
+Gender varchar(20),
+Email varchar(30) unique,
+Maritial varchar(20),
+Address varchar(50),
+City varchar(20),
+State varchar(30),
+Pincode varchar(20)
+);
