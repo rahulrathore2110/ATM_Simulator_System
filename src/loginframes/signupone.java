@@ -265,15 +265,17 @@ public class signupone extends JFrame implements ActionListener {
 					
 					int x = ps.executeUpdate();
 					
-					if(x > 0)
-						JOptionPane.showMessageDialog(null, "Signup Succesfull!");
-					else
+					if(x > 0) {
+						JOptionPane.showMessageDialog(null, "Details Save Succesfull!");
+						setVisible(false);
+						new signuptwo(formno).setVisible(true);	
+					}else
 						JOptionPane.showMessageDialog(null, "Signup Failed!");
 					
 					
 				}catch (SQLException e2) {
 					e2.printStackTrace();
-					JOptionPane.showMessageDialog(null, "Connection Error!");
+					JOptionPane.showMessageDialog(null, e2);
 				
 				
 				}
@@ -285,7 +287,7 @@ public class signupone extends JFrame implements ActionListener {
 		} catch (Exception e2) {
 
 			System.out.println(e2);
-			JOptionPane.showMessageDialog(null, "Input Error!");
+			JOptionPane.showMessageDialog(null, "Server Error!");
 		}
 		
 		
